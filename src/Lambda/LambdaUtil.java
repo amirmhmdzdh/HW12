@@ -25,23 +25,16 @@ public class LambdaUtil {
 
     public static BiFunction<String, Integer, String> stringMultiplier() {
 
-        return (str, number) -> {
+        return String::repeat;
+       // return (str, Integer) -> str.repeat(Integer);
 
-            StringBuilder stringBuilder = new StringBuilder();
-
-            for (int i = 0; i < number; i++) {
-                stringBuilder.append(str);
-            }
-            return stringBuilder.toString();
-
-        };
     }
 
     // * Q4 *
 
     public static Function<BigDecimal, String> toDollarStringFunction() {
 
-    return bigDecimal -> "$" +bigDecimal;
+        return bigDecimal -> "$" + bigDecimal;
 
     }
 
