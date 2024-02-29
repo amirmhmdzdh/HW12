@@ -62,7 +62,8 @@ public class LambdaUtil {
     public static IntUnaryOperator boundedRandomIntSupplier() {
 
         Random random = new Random();
-        return operand -> random.nextInt(operand);
+        return random::nextInt;
+      //  return operand -> random.nextInt(operand);
     }
 
 
